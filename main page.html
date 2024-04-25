@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>VolleyVerse.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VolleyVerse.com</title>
+<style>
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(''); /* Background image */
+    background-size: cover; /* Cover the entire header */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Text color for the article */
+  }
+  
+  /* Header styles */
+  header {
+    background-size: cover; /* Cover the entire header */
+    background-position: center; /* Center the background image */
+    background: linear-gradient(45deg, #3d006e, #1a1718); /* Gradient background */
+    color: #fff;
+    padding: 71.5px;
+    text-align: center; /* Align the header text to the center */
+    font-family: 'Lobster', cursive; /* Change the font for the header */
+  }
+
+/* Banner styles */
+.banner {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #410025;
+  padding: 20px 20px;
+  border-radius: 20px;
+  font-size: 50px;
+}
+
+
+   /* Animation for header text */
+   @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      animation: slideIn 10   s ease forwards;
+    }
+    
+  
+  /* Article styles */
+  article {
+    max-width: 100%; /* Adjusted max-width for wider main content space */
+    margin: 20px auto;
+    padding-right:  400px;
+    padding-left:20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: none; /* Align all child elements to the center horizontally */
+    margin-left: 325px;
+    
+  }
+  
+  /* Video styles */
+  .video-container {
+    margin-left: auto; /* Move the video to the right */
+    margin-bottom: 10px; /* Add space below the video */
+
+    margin-right: -400px;
+     margin-top:20px;
+    
+  }
+
+  /* Footer styles */
+  footer {
+    background: linear-gradient(45deg, #3d006e, #1a1718); /* Gradient background */
+    color: #fff;
+    text-align: right;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  
+  }
+  
+  /* Image styles */
+  article img {
+    max-width: auto; /* Make sure the images don't exceed the width of the article */
+    height: auto; /* Maintain the aspect ratio of the images */
+    margin-bottom: 30px; /* Add space below the image */
+    padding-left:30px ;
+    margin-top: 30px;
+  }
+
+  /* Main content text styles */
+  article p {
+    text-align: left; /* Align the main content text to the left */
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+
+    
+
+    /* Table of contents styles */
+    .table-of-contents {
+      position: fixed;
+      left: 20px;
+      top: 15.6%;
+      width: 300px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .table-of-contents ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .table-of-contents li {
+      margin-bottom: 10px;
+    }
+
+    .table-of-contents a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .table-of-contents a:hover {
+      text-decoration: underline;
+    }
+   /* Updated CSS for image gallery */
+#image-gallery {
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-right: -350px;
+}
+
+.image-slider {
+  display: flex;
+  transition: transform 0.5s ease; /* Add smooth transition */
+}
+
+.image-container {
+  flex: 0 0 auto;
+  border-radius: 10px; /* Adjust the value to make the corners smoother */
+  overflow: hidden; /* Ensure the image corners are clipped */
+}
+
+
+
+.image-container img {
+  width: 420px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px; /* Increase font size */
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* Add background color */
+  padding: 10px; /* Add padding for better visibility */
+  border-radius: 50%; /* Make the arrows circular */
+}
+
+.left {
+  left: 10px; /* Adjust left arrow position */
+}
+
+.right {
+  right: 10px; /* Adjust right arrow position */
+}
+/* Add styles for the active image */
+.image-container.active img {
+  transform: scale(1.3); /* Increase the scale for larger size */
+  transition: transform 0.5s ease; /* Add transition for smooth scaling */
+}
+
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+      <div class="banner">VolleyVerse.com </div> 
+      </header>
+      
+      <div class="scrollable-content">
+  <!-- Table of Contents -->
+  <div class="table-of-contents">
+    <h3>Table of Contents</h3>
+    <hr>
+    <ul>
+      <li><a href="#video-section">Video Section</a></li>
+      <hr>  
+      <li><a href="#image-gallery">Image Gallery</a></li>
+      <br>
+      <br>
+      <br>
+      <li><a href="#image-gallery">Introduction</a></li>
+      <br>
+      <br>
+      <br>
+      <li><a href="#image-gallery">History</a></li>
+      <br>
+      <br>
+      <br>
+      <li><a href="#image-gallery">References</a></li>
+      <br>
+      <br>
+      <br>
+      <li><a href="#image-gallery">Edit history</a></li>
+      <br>
+      <br>
+      <br>
+      <li><a href="#image-gallery">Quick facts</a></li>
+      <br>
+      <br>
+      <br>
+      <li><a href="#image-gallery">Related topics</a></li>
+      <br>
+      <hr>
+      <br>
+      
+      <!-- Add more links as needed -->
+    </ul>
+  </div>
+        <article>
+          <div class="video-container">
+            <iframe width="620" height="340" src="https://www.youtube.com/embed/D4JosJxB-7o?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+          </div>
+          
+              
+              >
+                
+                <h2>Volleyball</h2>
+                <p>Volleyball, game played by two teams, usually of six players on a side, in which the players use their hands to bat a ball back and forth over a high net, trying to make the ball touch the court within the opponents’ playing area before it can be returned. To prevent this a player on the opposing team bats the ball up and toward a teammate before it touches the court surface—that teammate may then volley it back across the net or bat it to a third teammate who volleys it across the net. A team is allowed only three touches of the ball before it must be returned over the net.</p>
+                
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Horizontal Image Gallery</title>
+                <style>
+                .container {
+                  display: flex;
+                  overflow-x: none;
+                  border: 0px solid #ccc;
+                  white-space: nowrap;
+                  align="center"
+                }
+                
+                .image {
+                  flex: 0 0 auto;
+                  margin: 0px;
+                  align="center"
+                }
+                
+                .image img {
+                  width: 320px;
+                  height: 250px;
+                  object-fit: cover;
+                  align="center"
+                }
+                
+                </style>
+                </head>
+                <body>
+                
+  
+<!-- Image gallery section -->
+<section id="image-gallery">
+  <div class="image-slider">
+    <div class="image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZHriLoQ9S3doEERESOn-pT7Ma2ZJxl2EGcA&s" alt="Image 1">
+    </div>
+    <div class="image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzONggWGR6GO8FatQvbDIHdb3otbH5bqKEjA&s" alt="Image 2">
+    </div>
+    <div class="image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBHydeHvlexDHIEyE4zoY0iEZiCuyubbn6FQ&s" alt="Image 3">
+    </div>
+    <div class="image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBHydeHvlexDHIEyE4zoY0iEZiCuyubbn6FQ&s" alt="Image 4">
+    </div>
+    <div class="image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBHydeHvlexDHIEyE4zoY0iEZiCuyubbn6FQ&s" alt="Image 3">
+    </div>
+    <div class="image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzONggWGR6GO8FatQvbDIHdb3otbH5bqKEjA&s" alt="Image 2">
+    </div>
+    <div class="image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZHriLoQ9S3doEERESOn-pT7Ma2ZJxl2EGcA&s" alt="Image 1">
+    </div>
+  </div>
+  <div class="arrow left">&lt;</div>
+  <div class="arrow right">&gt;</div>
+</section>
+
+    
+
+ 
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.image-slider');
+    const slides = document.querySelectorAll('.image-container');
+    const arrowLeft = document.querySelector('.arrow.left');
+    const arrowRight = document.querySelector('.arrow.right');
+  
+    let counter = 0;
+  
+    arrowLeft.addEventListener('click', () => {
+      counter--;
+      if (counter < 0) {
+        counter = slides.length - 1;
+      }
+      updateSlider();
+    });
+  
+    arrowRight.addEventListener('click', () => {
+      counter++;
+      if (counter >= slides.length) {
+        counter = 0;
+      }
+      updateSlider();
+    });
+  
+    function updateSlider() {
+      const slideWidth = slides[0].offsetWidth;
+      const sliderWidth = slider.offsetWidth;
+      const newPosition = -slideWidth * counter + (sliderWidth - slideWidth) / 2;
+      slider.style.transform = `translateX(${newPosition}px)`;
+  
+      // Remove active class from all slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+  
+      // Add active class to the current slide
+      slides[counter].classList.add('active');
+    }
+  });
+  
+  </script>
+</section>
+                
+                
+               
+             <p>Volleyball was invented in 1895 by William G. Morgan, physical director of the Young Men’s Christian Association (YMCA) in Holyoke, Massachusetts. It was designed as an indoor sport for businessmen who found the new game of basketball too vigorous. Morgan called the sport “mintonette,” until a professor from Springfield College in Massachusetts noted the volleying nature of play and proposed the name of “volleyball.” The original rules were written by Morgan and printed in the first edition of the Official Handbook of the Athletic League of the Young Men’s Christian Associations of North America (1897). The game soon proved to have wide appeal for both sexes in schools, playgrounds, the armed forces, and other organizations in the United States, and it was subsequently introduced to other countries.</p>
+              <p>In 1916 rules were issued jointly by the YMCA and the National Collegiate Athletic Association (NCAA). The first nationwide tournament in the United States was conducted by the National YMCA Physical Education Committee in New York City in 1922. The United States Volleyball Association (USVBA) was formed in 1928 and recognized as the rules-making, governing body in the United States. From 1928 the USVBA—now known as USA Volleyball (USAV)—has conducted annual national men’s and senior men’s (age 35 and older) volleyball championships, except during 1944 and 1945. Its women’s division was started in 1949, and a senior women’s division (age 30 and older) was added in 1977. Other national events in the United States are conducted by member groups of the USAV such as the YMCA and the NCAA.</p>
+        <p> Volleyball was introduced into Europe by American troops during World War I, when national organizations were formed. The Fédération Internationale de Volley Ball (FIVB) was organized in Paris in 1947 and moved to Lausanne, Switzerland, in 1984. The USVBA was one of the 13 charter members of the FIVB, whose membership grew to more than 210 member countries by the late 20th century.
+
+            Assorted sports balls including a basketball, football, soccer ball, tennis ball, baseball and others.
+            Britannica Quiz</p>
+            
+
+
+
+            <div class="video-container">
+              <iframe width="1480" height="1000" src="https://www.youtube.com/embed/3uM-R7bHwfE?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <p>International volleyball competition began in 1913 with the first Far East Games, in Manila. During the early 1900s and continuing until after World War II, volleyball in Asia was played on a larger court, with a lower net, and nine players on a team.</p>
+            <p>The FIVB-sponsored world volleyball championships (for men only in 1949; for both men and women in 1952 and succeeding years) led to acceptance of standardized playing rules and officiating. Volleyball became an Olympic sport for both men and women at the 1964 Olympic Games in Tokyo.</p>
+            <p>European championships were long dominated by Czechoslovakian, Hungarian, Polish, Bulgarian, Romanian, and Soviet (later, Russian) teams. At the world and Olympic level, Soviet teams have won more titles, both men’s and women’s, than those of any other nation. Their success was attributed to widespread grassroots interest and well-organized play and instruction at all levels of skill. A highly publicized Japanese women’s team, Olympic champions in 1964, reflected the interest of private industry in sport. Young women working for the sponsoring company devoted their free time to conditioning, team practice, and competition under expert and demanding coaching. Encouraged by the Japanese Volleyball Association, this women’s team made its mark in international competition, winning the World Championship in 1962, 1966, and 1967, in addition to the 1964 Olympics. At the end of the 20th century, however, the Cuban women’s team dominated both the World Championships and the Olympics.</p>
+            <p>The Pan American Games (involving South, Central, and North America) added volleyball in 1955, and Brazil, Mexico, Canada, Cuba, and the United States are frequent contenders for top honours. In Asia, China, Japan, and Korea dominate competition. Volleyball, especially beach volleyball, is played in Australia, New Zealand, and throughout the South Pacific.</p>
+            <p>A four-year cycle of international volleyball events, recommended by the FIVB, began in 1969 with World Cup championships, to be held in the year following the Olympic Games; the second year is the World Championships; in the third the regional events are held (e.g., European championships, Asian Games, African Games, Pan American Games); and in the fourth year the Olympic Games.</p>
+            <p>Beach volleyball—usually played, as its name implies, on a sand court with two players per team—was introduced in California in 1930. The first official beach volleyball tournament was held in 1948 at Will Rogers State Beach, in Santa Monica, California, and the first FIVB-sanctioned world championship was held in 1986 at Rio de Janeiro. Beach volleyball was added to the roster of the 1996 Olympic Games in Atlanta, Georgia.</p>
+            <p>Volleyball requires a minimum of equipment and space and can be played indoors or outdoors. The game is played on a smooth-surfaced court 9 metres (30 feet) wide by 18 metres (60 feet) long, divided by a centre line into two equal areas, one of which is selected by or assigned to each of the two competing teams. Players may not step completely beyond the centre line while the ball is in play. A line 3 metres (10 feet) from and parallel to the centre line of each half of the court indicates the point in front of which a back court player may not drive the ball over the net from a position above the top of the net. (This offensive action, called a spike, or kill, is usually performed most effectively and with greatest power near the net by the forward line of players.) A tightly stretched net is placed across the court exactly above the middle of the centre line; official net heights (measured from the top edge of the net to the playing surface—in the middle of the court) are 2.4 metres (8 feet) for men and 2.2 metres (7.4 feet) for women. Further adjustments in net height can be made for young people and others who need a lower net. A vertical tape marker is attached to the net directly above each side boundary line of the court, and, to help game officials judge whether served or volleyed balls are in or out of bounds, a flexible antenna extends 1 metre (3 feet) above the net along the outer edge of each vertical tape marker. The ball used is around 260 to 280 grams (9 to 10 ounces) and is inflated to about 65 cm (25.6 inches) in circumference. A ball must pass over the net entirely between the antennae. A service area, traditionally 3 metres (10 feet) long, is marked outside and behind the right one-third of each court end line. At the 1996 Olympic Games the service area was extended to 9 metres (30 feet). The service must be made from within or behind this area. A space at least 2 metres (6 feet) wide around the entire court is needed to permit freedom of action, eliminate hazards from obstructions, and allow space for net support posts and the officials’ stands. A clear area above the court at least 8 metres (26 feet) high is required to permit the ball to be served or received and played without interference.</p>
+            <p></p>
+            <p></p>
+
+           
+        
+      </div>
+      
+      
+    
+      
+      <style>
+        /* Styles for scrollable content */
+        .scrollable-content {
+          height: calc(100vh - 140px); /* Adjust the height according to your header and footer height */
+          overflow-y: auto; /* Enable vertical scrolling */
+          padding: 0 20px; /* Add padding to match the article padding */
+        }
+      </style>
+</header>
+
+
+<!-- ADVERTISMENT 1-->
+<footer>
+  <p>&copy; 2024 Aesthetic Article Page. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aesthetic Article Page</title>
+<style>
+  /* Your existing styles */
+  /* Ensure that the modal is initially hidden */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+  }
+  
+  /* Style for the modal content */
+  .modal-content {
+    background: linear-gradient(45deg, #3d006e, #1a1718); /* Gradient background */
+    margin: 20% auto; /* Center the modal vertically and horizontally */
+    padding: 20px;
+    border: 1px solid #ffffff;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Maximum width of the modal */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    animation: zoom 0.6s;
+    color:#fff
+  }
+  
+  /* Modal close button */
+  .close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Animation for the modal */
+  @keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+</style>
+</head>
+<body>
+
+
+ 
+<!-- Modal Popup Ad -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Special Offer!</h2>
+    <p>Get 50% off on all items. Limited time offer!</p>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the page loads, show the modal after 5 seconds
+window.onload = function() {
+  setTimeout(function() {
+    modal.style.display = "block";
+  }, 5000); // Adjust the time delay (in milliseconds) as needed
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner Pop-up Ad</title>
+  <style>
+    /* CSS for banner pop-up ad */
+    .banner-ad {
+      display: none; /* Initially hidden */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      back
+      padding: 10px 0; /* Padding */
+      text-align: right;
+      z-index: 9999; /* Ensure it's above other content */
+      animation: slideUp 0.5s ease-in-out; /* Animation */
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .banner-ad img {
+      max-width: 100%; /* Ensure image fits within the banner */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Banner pop-up ad -->
+  <div class="banner-ad" id="bannerAd">
+    <span class="close-btn" onclick="closeBanner()">X</span> <!-- Close button -->
+    <img src="data:image/jpeg;base64,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" alt="Banner Ad Image"> <!-- Replace with your image source -->
+  </div>
+
+  <script>
+    // JavaScript for banner animation and display
+    document.addEventListener('DOMContentLoaded', function() {
+      // Show the banner after 2 seconds
+      setTimeout(function() {
+        document.getElementById('bannerAd').style.display = 'block';
+      }, 10000);
+    });
+
+    // Function to close the banner
+    function closeBanner() {
+      document.getElementById('bannerAd').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
